@@ -123,7 +123,7 @@ class Modules_Cloudflaredns_List_Domains extends pm_View_List_Simple
                     : "<a class='s-btn sb-enable' data-method='post'".
                     " href='{$view->url(['action' => 'enable-domain'])}?id=$urlId'>".
                     "<span>".$this->lmsg('enableAutoSync')."</span>".
-                    "</a>") : "<span>This domain is not in Cloudflare</span>",
+                    "</a>") : "<span>".$this->lmsg('domainNotFound')."</span>",
             ];
         }
 
