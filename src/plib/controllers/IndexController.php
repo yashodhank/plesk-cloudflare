@@ -110,7 +110,7 @@ class IndexController extends pm_Controller_Action
                 continue;
             }
             $savedDomains[] = $id;
-            $messages[] = ['status' => 'info', 'content' => "Domain #$id has been enabled."];
+            $messages[] = ['status' => 'info', 'content' => str_replace("%1",$id,$this->lmsg('enableDomain'))];
         }
         $savedDomains = self::domainCleanup($savedDomains);
         pm_settings::set(Modules_Cloudflaredns_List_Domains::DOMAINS, json_encode($savedDomains));
@@ -137,7 +137,7 @@ class IndexController extends pm_Controller_Action
             $savedDomains = array_filter($savedDomains, function ($domain) use ($id) {
                 return $domain !== $id;
             });
-            $messages[] = ['status' => 'info', 'content' => "Domain #$id has been disabled."];
+            $messages[] = ['status' => 'info', 'content' => str_replace("%1",$id,$this->lmsg('disableDomain'))];
         }
         $savedDomains = self::domainCleanup($savedDomains);
         pm_settings::set(Modules_Cloudflaredns_List_Domains::DOMAINS, json_encode($savedDomains));
