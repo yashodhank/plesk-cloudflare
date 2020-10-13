@@ -101,7 +101,7 @@ class Modules_Cloudflaredns_Client
         $result = @json_decode(curl_exec($curl), true);
 
         if (!isset($result['result'])) {
-            throw new Exception('Cloudflare Error: '.json_encode($result));
+            throw new Exception('API Key not valid');
         }
 
         static::$zones = array_combine(array_column($result['result'], 'id'), array_column($result['result'], 'name'));
