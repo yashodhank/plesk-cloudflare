@@ -70,10 +70,11 @@ class Modules_Cloudflaredns_Form_Settings extends pm_Form_Simple
                 ['NotEmpty', true],
             ],
         ]);
-        $this->addElement('password', static::API_KEY, [
+        $this->addElement('text', static::API_KEY, [
             'label'       => pm_Locale::lmsg('privateKeyLabel'),
             'value'       => pm_Settings::get(static::API_KEY),
-            'required'    => false,
+            'class'       => 'f-large-size',
+            'required'    => true,
             'validators'  => [],
         ]);
         $this->addElement('text', static::OVERRIDE_TTL, [
