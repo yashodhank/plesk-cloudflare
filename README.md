@@ -10,7 +10,7 @@
 
 ## How to install
 
-- Navigate to the releases tab: https://github.com/firstred/plesk-cloudflare/releases/latest
+- Navigate to the releases tab: https://github.com/virmix/plesk-cloudflare/releases/latest
 - Download the extension
 - Add the following to your [panel.ini](https://docs.plesk.com/en-US/onyx/administrator-guide/plesk-administration/panelini-configuration-file.78509/) file:
 
