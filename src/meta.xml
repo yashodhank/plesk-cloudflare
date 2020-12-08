@@ -7,7 +7,7 @@
   <category>dns</category>
   <version>1.1</version>
   <release>1</release>
-  <vendor>Michael Dekker (Mod Javier Puerto) (Mod abdullahazad)</vendor>
+  <vendor>Michael Dekker (Mod abdullahazad) (Mod Javier Puerto)</vendor>
   <url>https://github.com/firstred/plesk-cloudflare</url>
   <plesk_min_version>17.8</plesk_min_version>
   <!--Localized descriptions below-->
