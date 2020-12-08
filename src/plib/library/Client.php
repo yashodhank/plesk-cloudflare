@@ -90,7 +90,7 @@ class Modules_Cloudflaredns_Client
             return array_values(static::$zones);
         }
 
-        $curl = curl_init(static::BASE_URL.'zones');
+        $curl = curl_init(static::BASE_URL.'zones/?match=all&per_page=300'); # list all domain by abdullahazad
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_HTTPHEADER     => [
@@ -389,7 +389,7 @@ class Modules_Cloudflaredns_Client
             throw new Exception('Cloudflare domain not found');
         }
 
-        $curl = curl_init(static::BASE_URL."zones/{$zoneId}/dns_records");
+        $curl = curl_init(static::BASE_URL."zones/{$zoneId}/dns_records?match=all&per_page=300"); # list all dns entries by abdullahazad
         curl_setopt_array($curl, [
             CURLOPT_HTTPHEADER     => [
                 "X-Auth-Email: {$this->email}",
